@@ -1,1 +1,140 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+
+    font-family: 'ValoFont';
+
+    src: url('app/assets/fonts/Valorant_Font.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+.valo_font {
+    font-family: 'ValoFont';
+}
+
+html,
+body {
+
+    margin: 0;
+    padding: 0;
+
+    font-family: 'ValoFont';
+    /* Color azul mas claro  */
+    /* background: #0f172a; */
+    /* Color azul oscuro: rgb(15, 25, 35); */
+    background: rgb(15, 25, 35);
+
+    color: white;
+}
+
+* {
+
+    font-family: 'ValoFont';
+}
+
+:host ::ng-deep .p-menubar {
+
+    font-family: 'ValoFont';
+}
+
+:host ::ng-deep .p-menubar {
+
+    font-family: 'ValoFont';
+
+    font-size: 1.1rem;
+
+    border-radius: 16px;
+}
+
+:host ::ng-deep .p-menubar .p-menubar-item-label {
+
+    font-family: 'ValoFont';
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* //////////////////////////////////////////////// */
+:host ::ng-deep .p-placeholder {
+
+    background: #1f2937;
+
+    border: 2px solid rgba(255, 70, 85, 0.2);
+
+    border-radius: 18px;
+
+    min-height: 56px;
+
+    transition: all 0.3s ease;
+}
+
+
+.p-dataview-header {
+    /* background: #0f172a; */
+    background: rgb(15, 25, 35) !important;
+}
+
+.title {
+    color: aliceblue
+}
+
+.subtitle {
+    color: aliceblue
+}
+
+.p-drawer-right {
+    /* background: rgb(15, 25, 35)!important; */
+    background: rgb(15, 25, 35) !important;
+
+
+
+}
+
+
+.p-multiselect {
+
+    border-radius: 16px;
+    min-height: 52px;
+    background: rgb(15, 25, 35) !important;
+    border-color: #FF4655 !important;
+
+}
+
+.p-multiselect-overlay {
+    background: rgb(15, 25, 35) !important;
+
+}
+
+
+
+:root {
+
+    --p-checkbox-checked-background: #ff4655;
+    --p-inputtext-focus-border-color: #ff4655;
+    --p-checkbox-checked-background: #ff4655;
+    --p-chip-remove-icon-focus-ring-color: #ff4655;
+    --p-checkbox-checked-hover-background: #ff4655 !important;
+    --p-checkbox-checked-border-color: #ff4655;
+    --p-form-field-float-label-focus-color: #ff4655;
+    --p-checkbox-checked-border-color: #ff4655;
+    --p-checkbox-checked-background: #ff4655;
+    --p-checkbox-checked-border-color: #ff4655;
+    --p-checkbox-checked-hover-border-color: #ff4655;
+    --p-checkbox-checked-focus-border-color: #ff4655;
+    --p-checkbox-focus-ring-color: #ff4655;
+}
+
+
+body {
+
+    --p-checkbox-checked-background: #ff4655;
+    --p-checkbox-checked-border-color: #ff4655;
+    /* --p-multiselect-option-selected-focus-background: #ff4655; */
+    --p-multiselect-option-selected-background: #f59aa1;
+    --p-multiselect-option-selected-focus-background: #fc5361;
+    --p-multiselect-option-selected-focus-color: rgb(15, 25, 35) !important;
+    --p-multiselect-option-selected-color: rgb(15, 25, 35) !important;
+}

@@ -1,0 +1,86 @@
+<div class="card valorant-container general-container">
+
+    <p-dataview [value]="agents()" layout="grid" class="">
+
+        <!-- HEADER -->
+        <ng-template #header>
+
+            <div class="flex justify-between items-center mb-4">
+
+                <div>
+                    <h1 class="title">
+                        Valorant Agents
+                    </h1>
+
+                    <p class="subtitle">
+                        Explore all playable agents
+                    </p>
+                </div>
+
+                <p-tag [value]="agents().length + ' Agents'" severity="danger">
+                </p-tag>
+
+            </div>
+
+        </ng-template>
+
+        <!-- GRID -->
+        <!-- GRID -->
+        <ng-template #grid let-items>
+
+            <div class="agents-grid">
+
+                <div class="agent-grid-item" *ngFor="let agent of items">
+
+                    <div class="agent-card">
+
+                        <!-- ROLE -->
+                        <p-tag [value]="agent.role" severity="danger" class="agent-role-tag">
+                        </p-tag>
+
+                        <!-- IMAGE -->
+                        <div class="image-container">
+
+                            <img class="agent-image" [src]="baseUrl+ agent.image" [alt]="agent.name" />
+
+                        </div>
+                        
+                        <!-- CONTENT -->
+                        <div class="agent-content">
+
+                            <div class="agent-name">
+                                {{ agent.name }}
+                            </div>
+
+                            <div class="agent-role">
+                                {{ agent.role }}
+                            </div>
+
+                            <div class="agent-description">
+                                {{ agent.description }}
+                            </div>
+
+                        </div>
+
+                        <!-- ACTIONS
+                        <div class="agent-actions">
+
+                            <p-button icon="pi pi-heart" [outlined]="true">
+                            </p-button>
+
+                            <p-button icon="pi pi-eye" label="View" severity="danger">
+                            </p-button>
+
+                        </div> -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </ng-template>
+
+    </p-dataview>
+
+</div>

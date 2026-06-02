@@ -1,0 +1,117 @@
+<div class="play-wrapper">
+
+    <div
+        class="play-box"
+        [class.result-mode]="selectedRandomAgent() !== null"
+        (click)="showAgentPanel.set(true)">
+
+        @if(selectedRandomAgent() !== null){
+
+            <div class="selected-agent">
+
+                {{ selectedRandomAgent()?.name }}
+
+            </div>
+
+        }
+
+        <div class="play-button-content">
+
+            @if(selectedRandomAgent() === null){
+
+                <span>
+                    Play
+                </span>
+
+            }
+
+            @if(selectedRandomAgent() !== null){
+
+                <i class="pi pi-refresh"></i>
+
+                <span>
+                    Play Again
+                </span>
+
+            }
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<p-drawer
+    header="Select Agents"
+    [(visible)]="showAgentPanel"
+    position="right"
+    styleClass="agent-drawer">
+
+    <div class="drawer-content">
+
+        <!-- SELECT -->
+        <div class="drawer-section">
+
+            <label class="drawer-label ">
+                Choose your agents
+            </label>
+
+            <p-multiSelect
+                [options]="groupedAgents()"
+                [group]="true"
+                [(ngModel)]="selectedAgents"
+                placeholder="Select Agents"
+                scrollHeight="320px"
+                display="chip"
+                class="w-full valo-multiselect">
+
+                <ng-template let-group #group>
+
+                    <div class="group-header">
+
+                        <p-checkbox
+                            [binary]="true"
+                            [ngModel]="isGroupSelected(group)"
+                            (onChange)="toggleGroup(group)">
+                        </p-checkbox>
+
+                        <span class="group-title">
+
+                            {{ group.label }}
+
+                        </span>
+
+                    </div>
+
+                </ng-template>
+
+            </p-multiSelect>
+
+        </div>
+
+        
+        @if(selectedAgents().length === 0){
+
+            <div class="empty-message">
+
+                You must select at least one agent
+
+            </div>
+
+        }
+
+        <!-- BUTTON -->
+        <p-button
+            [disabled]="selectedAgents().length === 0"
+            (onClick)="randomizeAgents()"
+            label="Start Game"
+            icon="pi pi-play"
+            severity="danger"
+            styleClass="start-button w-full">
+
+        </p-button>
+
+    </div>
+
+</p-drawer>

@@ -1,0 +1,77 @@
+<div class="card valorant-container general-container">
+
+    <p-dataview [value]="weapons()" layout="grid" class="">
+
+        <!-- HEADER -->
+        <ng-template #header>
+
+            <div class="flex justify-between items-center mb-4">
+
+                <div>
+                    <h1 class="title">
+                        Valorant Weapons
+                    </h1>
+
+                    <p class="subtitle">
+                        Explore all playable weapons
+                    </p>
+                </div>
+
+                <p-tag [value]="weapons().length + ' Weapons'" severity="danger">
+                </p-tag>
+
+            </div>
+
+        </ng-template>
+
+        <!-- GRID -->
+        <!-- GRID -->
+        <ng-template #grid let-items>
+
+            <div class="weapons-grid">
+
+                <div class="weapon-grid-item" *ngFor="let weapon of items">
+
+                    <div class="weapon-card">
+
+                        <!-- ROLE -->
+                        <p-tag [value]="weapon.category" severity="danger" class="weapon-role-tag">
+                        </p-tag>
+
+                        <!-- IMAGE -->
+                        <div class="image-container">
+
+                            <img class="weapon-image" [src]="weapon.image" [alt]="weapon.name" />
+
+                        </div>
+
+                        <!-- CONTENT -->
+                        <div class="weapon-content">
+
+                            <div class="weapon-name">
+                                {{ weapon.name }}
+                            </div>
+
+                            <div class="weapon-role">
+                                Price: {{ weapon.price }}
+                            </div>
+
+                            <div class="weapon-role">
+                                Head Damage: {{ weapon.headDamage }}
+                            </div>
+                            <div class="weapon-role">
+                                Body Damage: {{ weapon.bodyDamage }}
+                            </div>
+                            <div class="weapon-role">
+                                Leg Damage: {{ weapon.legDamage }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </ng-template>
+
+    </p-dataview>
+
+</div>
