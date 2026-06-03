@@ -137,4 +137,5 @@ body {
     --p-multiselect-option-selected-focus-background: #fc5361;
     --p-multiselect-option-selected-focus-color: rgb(15, 25, 35) !important;
     --p-multiselect-option-selected-color: rgb(15, 25, 35) !important;
+    --p-dataview-header-border-color: rgb(15, 25, 35);
 }
