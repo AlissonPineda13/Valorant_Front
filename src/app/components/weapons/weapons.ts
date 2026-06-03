@@ -19,6 +19,8 @@ export class Weapons {
 
  weapons = signal<WeaponModel[]>([]);
   constructor(private httpclient: Httpclient) { }
+  baseUrl = 'http://localhost:5000/static/weapons/';
+
 
   ngOnInit(): void {
     this.httpclient.getWeapons().subscribe({
