@@ -3,5 +3,7 @@ export interface AgentModel {
     id: string;
     name: string;
     description: string;
-    role: string
+    role: string;
+    image: string;
+
 }

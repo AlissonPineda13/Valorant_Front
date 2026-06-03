@@ -5,9 +5,8 @@ import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
 import { DataViewModule } from 'primeng/dataview';
 import { Httpclient } from '../../services/httpclient';
-import { AGENTS_MOCK } from '../../mocks/agents.mock';
 import { WeaponModel } from '../models/weaponmodel';
-import { WEAPONS_MOCK } from '../../mocks/weapons.mock';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-weapons',
@@ -19,7 +18,7 @@ export class Weapons {
 
  weapons = signal<WeaponModel[]>([]);
   constructor(private httpclient: Httpclient) { }
-  baseUrl = 'http://localhost:5000/static/weapons/';
+  assetsUrl = environment.assetsUrl + '/weapons/';
 
 
   ngOnInit(): void {

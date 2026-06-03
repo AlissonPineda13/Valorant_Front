@@ -5,10 +5,9 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { SelectItemGroup } from 'primeng/api';
 import { CheckboxModule } from 'primeng/checkbox';
 import { DrawerModule } from 'primeng/drawer';
-import { NgIf } from "../../../../node_modules/@angular/common/types/_common_module-chunk";
-import { AGENTS_MOCK } from '../../mocks/agents.mock';
 import { AgentModel } from '../models/agentmodel';
 import { Httpclient } from '../../services/httpclient';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-game',
@@ -21,7 +20,9 @@ export class GameComponent {
   agents = signal<AgentModel[]>([]);
   selectedAgents = signal<AgentModel[]>([]);
 
+  assetsUrl = environment.assetsUrl + '/agents/';
 
+  
   selectedRandomAgent = signal<AgentModel | null>(null);
   showAgentPanel = signal(false);
   constructor(private httpclient: Httpclient) { }
