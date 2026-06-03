@@ -5,8 +5,8 @@ import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
 import { DataViewModule } from 'primeng/dataview';
 import { Httpclient } from '../../services/httpclient';
-import { AGENTS_MOCK } from '../../mocks/agents.mock';
 import { AgentModel } from '../models/agentmodel';
+import { environment } from '../../../environments/environment';
 
 
 
@@ -21,7 +21,7 @@ export class AgentsComponent {
   agents = signal<AgentModel[]>([]);
   constructor(private httpclient: Httpclient) { }
 
-  baseUrl = 'http://localhost:5000/static/agents/';
+  assetsUrl = environment.assetsUrl + '/agents/';
   
   ngOnInit(): void {
 
