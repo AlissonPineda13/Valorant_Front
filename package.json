@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:valorant_info": "node dist/valorant_info/server/server.mjs"
+    "serve:ssr:valorant_front": "node dist/valorant_front/server/server.mjs"
   },
   "private": true,
   "packageManager": "npm@11.12.1",
