@@ -2,9 +2,7 @@ export const environment = {
 
   production: true,
 
-  apiUrl: 'https://api.valorantinfo.com/',
-  assetsUrl: 'http://localhost:5000/static',
-
-
+  apiUrl: 'https://valorantback-production.up.railway.app/',
+  assetsUrl: 'https://valorantback-production.up.railway.app/static',
 
 };
